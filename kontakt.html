@@ -1,0 +1,574 @@
+
+    <!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Psí hotel Deniska</title>
+    
+    <link rel="icon" type="image/x-icon" href="favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <!-- Tvůj styl -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Styl pro řádkování pod sebou a čistá bílá políčka bez čar -->
+    <style>
+        .form-block-group {
+            margin-bottom: 40px !important;
+            display: block !important;
+            width: 100% !important;
+        }
+        .form-block-title {
+            font-size: 1.4rem !important;
+            color: #60110C !important;
+            margin-bottom: 20px !important;
+            font-weight: 700 !important;
+            display: block !important;
+        }
+        .form-row {
+            display: flex !important;
+            flex-direction: column !important;
+            gap: 20px !important;
+            width: 100% !important;
+            margin-bottom: 20px !important;
+        }
+        .form-field {
+            display: flex;
+            flex-direction: column !important;
+            gap: 8px !important;
+            width: 100% !important;
+        }
+        /* Styl pro řádek s checkboxem */
+        .form-field-checkbox {
+            display: flex;
+            flex-direction: row !important;
+            align-items: center !important;
+            gap: 12px !important;
+            margin-top: 10px !important;
+            cursor: pointer;
+        }
+        .form-field-checkbox input {
+            width: 22px !important;
+            height: 22px !important;
+            cursor: pointer;
+            accent-color: #BC7C64 !important; /* Terakotová barva pro zaškrtávátko */
+        }
+        .form-field label {
+            font-size: 1rem !important;
+            font-weight: 600 !important;
+            color: #000 !important;
+        }
+        .form-field input, .form-field select, .form-field textarea {
+            font-family: 'Poppins', sans-serif !important;
+            background-color: #FFF !important;
+            box-shadow: 0 4px 20px rgba(96, 17, 12, 0.08) !important;
+            padding: 16px 20px !important;
+            font-size: 1rem !important;
+            color: #000 !important;
+            border-radius: 8px !important;
+            border: none !important;
+            width: 100% !important;
+            display: block;
+            transition: box-shadow 0.3s ease !important;
+        }
+        .form-field textarea {
+            resize: vertical !important;
+            height: 120px !important;
+        }
+        .form-field input:focus, .form-field select:focus, .form-field textarea:focus {
+            background-color: #FFF !important;
+            color: #000 !important;
+            box-shadow: 0 4px 25px rgba(96, 17, 12, 0.18) !important;
+        }
+    </style>
+</head>
+<body>
+  
+
+
+    <!-- HLAVIČKA S LOGEM A HAMBURGEREM -->
+    <header class="main-header">
+        <div class="container header-flex">
+            <!-- Logo místo původního textového nadpisu -->
+            <div class="logo">
+                <a href="index.html"><img src="logo.png" alt="Psí hotel Deniska"></a>
+            </div>
+            
+            <!-- Čisté CSS mobilní menu -->
+            <input type="checkbox" id="menu-toggle">
+            <label for="menu-toggle" class="hamburger-icon">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+
+            <nav class="main-nav">
+                <a href="index.html">Úvod</a>
+                <a href="sluzby.html">Služby</a>
+                <a href="ubytovani.html">Ubytování</a>
+                <a href="reference.html">Reference</a>
+                <a href="pomahame.html">Články</a>
+                <a href="cenik.html">Ceník</a>
+                <a href="kontakt.html">Kontakt</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- 2. BANNER STRÁNKY -->
+    <section class="page-banner">
+        <div class="container">
+            <h1>Kontakt a přihlášky</h1>
+            <p class="subtitle">Kontakty najdete pod formulářem</p>
+        </div>
+    </section>
+
+   <section>
+
+                <div class="center-text"> 
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSecxZBlhI2ehMoTLDj4VFgBqgRPgjlvpSdEnBLg2JomdL1XCA/viewform?pli=1" class="btn btn-large3">Přihláška na tréninkovou procházku</a>
+                    <a href="#kontaktik" class="btn btn-large3">Přihláška na individuální trénink</a>
+                </div>
+    </section>
+
+
+
+    <!-- BANNER STRÁNKY -->
+    <section class="page-banner2">
+        <div class="container">
+            <h1>Rezervace pobytu</h1>
+            <p>Vyplňte údaje o pejskovi a odešlete nezávaznou poptávku</p>
+        </div>
+    </section>
+
+    <!-- REZERVAČNÍ FORMULÁŘ -->
+    <section class="form-section">
+        <div class="container">
+            <form id="reservationForm" name="ubytovani" method="POST" class="booking-form" style="max-width: 700px; margin: 0 auto;" data-netlify="true">
+                
+                <!-- BLOK A: ÚDAJE O MAJITELI -->
+                <div class="form-block-group">
+                    <span class="form-block-title">Údaje o majiteli</span>
+                    <div class="form-row">
+                        <div class="form-field">
+                            <label for="ownerName">Jméno a příjmení majitele</label>
+                            <input type="text" id="ownerName" name="Jmeno_Majitele" required placeholder="Jan Novák">
+                        </div>
+                        <div class="form-field">
+                            <label for="ownerEmail">E-mail majitele</label>
+                            <input type="email" id="ownerEmail" name="Email_Majitele" required placeholder="novak@email.cz">
+                        </div>
+                        <div class="form-field">
+                            <label for="ownerPhone">Telefon majitele</label>
+                            <input type="tel" id="ownerPhone" name="Telefon_Majitele" required placeholder="+420 777 683 887">
+                        </div>
+                    </div>
+                </div>
+
+                                                              <!-- BLOK B: ÚDAJE O PEJSKOVI -->
+                <div class="form-block-group">
+                    <span class="form-block-title">Údaje o pejskovi / pejcích</span>
+                    <div class="form-row">
+                        <div class="form-field">
+                            <label for="dogCount">Počet psů k ubytování</label>
+                            <select id="dogCount" name="Pocet_Psu" required>
+                                <option value="1" selected>1 pes</option>
+                                <option value="2">2 psi</option>
+                                <option value="3">3 psi</option>
+                                <option value="4">4 psi</option>
+                            </select>
+                        </div>
+                        
+                        <!-- Políčko pro sdílení pokoje -->
+                        <!-- Políčko pro sdílení pokoje (OPRAVENÉ SE SKRYTÍM) -->
+                         <div class="form-field-checkbox" id="shareRoomBox" style="display: none;">
+
+                            <input type="checkbox" id="shareRoom" name="Pejskove_sdileji_pokoj" checked>
+                            <label for="shareRoom">Pejskové budou sdílet jeden společný pokoj (sleva 50 % pro druhého a dalšího psa)</label>
+                        </div>
+
+                        <!-- Checkbox: První návštěva -->
+                        <div class="form-field-checkbox">
+                            <input type="checkbox" id="firstTime" name="Pejsek_u_nas_bude_poprve">
+                            <label for="firstTime">Pejsek u nás bude poprvé</label>
+                        </div>
+
+                        <!-- UPRAVENÉ A NOVÉ CHECKBOXY -->
+                        <div class="form-field-checkbox">
+                            <input type="checkbox" id="dogAggressive" name="Projevy_agrese_psi_lidi">
+                            <label for="dogAggressive">Pejsek může reagovat agresivně na jiné psy nebo lidi</label>
+                        </div>
+
+                        <div class="form-field-checkbox">
+                            <input type="checkbox" id="dogHeat" name="Fena_bude_harat">
+                            <label for="dogHeat">Fena během pobytu bude hárat</label>
+                        </div>
+
+                        <div class="form-field-checkbox">
+                            <input type="checkbox" id="dogAnxiety" name="Problem_s_samotou">
+                            <label for="dogAnxiety">Pejsek má problém být sám (separační úzkost / ničení věcí)</label>
+                        </div>
+
+                        <div class="form-field-checkbox">
+                            <input type="checkbox" id="dogMeds" name="Pes_uziva_leky">
+                            <label for="dogMeds">Pejsek pravidelně užívá léky</label>
+                        </div>
+
+                        <div class="form-field">
+                            <label for="dogDetails">Jména, plemena a věk pejsků</label>
+                            <textarea id="dogDetails" name="Podrobnosti_o_psech" required placeholder="Napište jméno, plemeno, pohlaví a věk každého pejska (např. Max - Zlatý retriever, pes, 3 roky)."></textarea>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+                                <!-- NOVÉ POŘADÍ: NEJPRVE TERMÍN POBYTU -->
+                <div class="form-block-group">
+                    <span class="form-block-title">Termín pobytu</span>
+                    <div class="form-row">
+                        <div class="form-field">
+                            <label for="startDate">Datum začátku pobytu</label>
+                            <input type="date" id="startDate" name="Datum_Zacatku" required>
+                        </div>
+                        <div class="form-field">
+                            <label for="endDate">Datum konce pobytu</label>
+                            <input type="date" id="endDate" name="Datum_Konce" required>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- VOLBY POBYTU (POKOJE A TRÉNINKY) -->
+                <div class="form-block-group">
+                    <span class="form-block-title">Podrobnosti o pobytu</span>
+                    <div class="form-row">
+                        <!-- Rozepsané pokoje zvlášť -->
+                        <div class="form-field">
+                            <label for="roomSize">Výběr pokoje</label>
+                            <select id="roomSize" name="Vybrany_Pokoj" required>
+                                <option value="maly">Malý pokoj</option>
+                                <option value="stredni" selected>Střední pokoj</option>
+                                <option value="velky">Velký pokoj</option>
+                            </select>
+                        </div>
+
+                        <!-- Volba počtu tréninků -->
+                        <div class="form-field">
+                            <label for="trainingCount">Počet tréninků během pobytu</label>
+                            <select id="trainingCount" name="Pocet_Treninku">
+                                <option value="0" selected>Bez výcviku / tréninku</option>
+                            </select>
+                            <small style="color: #666; margin-top: 4px;">Maximální počet tréninků odpovídá délce ubytování.</small>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- POZNÁMKA -->
+                <div class="form-block-group">
+                    <span class="form-block-title">Poznámka</span>
+                    <div class="form-row">
+                        <div class="form-field">
+                            <label for="userNotes">Doplňující informace nebo Vaše přání</label>
+                            <textarea id="userNotes" name="Poznamka" placeholder="Zde můžete uvést jakékoliv další detaily týkající se stravy, návyků nebo speciálních požadavků..."></textarea>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- DYNAMICKÝ VÝPOČET CENY -->
+                <div class="price-calculation-box">
+                    <h3>Předběžná kalkulace ceny</h3>
+                    <div class="price-details">
+                        <p>Celkový počet dní: <strong id="totalDays">0</strong></p>
+                        <p>Zvolený počet tréninků: <strong id="selectedTrainingsDisplay">0</strong></p>
+                        <p id="discountNotice" class="season-text" style="font-weight: 600; display: none; color: #BC7C64;"></p>
+                        <p id="seasonNotice" class="season-text"></p>
+                    </div>
+                    <div class="final-price">
+                        Cena: <span id="calculatedPrice">0</span> Kč
+                    </div>
+                </div>
+
+                <div class="center-text">
+                    <button type="submit" class="btn btn-large">Odeslat rezervační e-mail</button>
+                </div>
+            </form data-netlify="true" netlify>
+        </div>
+    </section>
+
+
+
+
+    <!-- KONTAKTY PŘESUNUTÉ AŽ NA KONEC NAD FOOTER -->
+    <section class="contact-info-section">
+        <div class="container grid-3">
+            <div class="contact-card1">
+                <div class="paw-icon">🐾</div>
+                <h3>Kde nás najdete</h3>
+                <p>Milonice 150<br>okres Vyškov</p>
+            </div>
+            <div class="contact-card1" id="kontaktik">
+                <div class="paw-icon">🐾</div>
+                <h3>Zavolejte nám</h3>
+                <p><a href="tel:777683887" class="contact-link-text">777 683 887</a></p>
+            </div>
+            <div class="contact-card1">
+                <div class="paw-icon">🐾</div>
+                <h3>Napište nám</h3>
+                <p><a href="mailto:hotel.deniska@gmail.com" class="contact-link-text">hotel.deniska@gmail.com</a></p>
+            </div>
+        </div>
+    </section>
+
+       <!-- PATIČKA -->
+    <footer class="main-footer">
+        <div class="container">
+            <h2>Rezervace a kontakt</h2>
+            <div class="grid-2">
+                <div class="footer-contacts">
+                    <p><strong>Telefon:</strong> +420 123 456 789</p>
+                    <p><strong>E-mail:</strong> hotel.deniska@gmail.com</p>
+                    <p><strong>Adresa:</strong> Milonice, Roštoutky 150 okres Vyškov </p>
+                    <p><strong>IČO:</strong> 07239351</p><br>
+                    <a href="obchodni.html" class="podm">Obchodní podmínky</a><br>
+                    <a href="zasady.html"class="podm">Zásady ochrany osobních údajů</a>
+                </div>
+                <div class="footer-info">
+                    <p>Máte vybraný konkrétní pokoj?</p>
+                    <a href="kontakt.html" class="btn">rezervace</a><br>
+                    
+                    <a href="podminky.html"class="podm">Podmínky pobytu</a><br>
+                    <a href="balime.html"class="podm">Balíme pejskovi na dovolenou</a>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2026 Psí hotel Deniska. Všechna práva vyhrazena.</p>
+            </div>
+        </div>
+    </footer>
+
+
+   <!-- INTERAKTIVNÍ JAVASCRIPT -->
+  <script>
+        const PRICES = {
+            maly: { standard: 500, season: 700 },
+            stredni: { standard: 600, season: 800 },
+            velky: { standard: 700, season: 900 },
+            training: 300
+        };
+
+        const form = document.getElementById('reservationForm');
+        const startDateInput = document.getElementById('startDate');
+        const endDateInput = document.getElementById('endDate');
+        const roomSizeSelect = document.getElementById('roomSize');
+        const dogCountSelect = document.getElementById('dogCount');
+        const trainingCountSelect = document.getElementById('trainingCount');
+        const shareRoomCheckbox = document.getElementById('shareRoom');
+        const shareRoomBox = document.getElementById('shareRoomBox');
+        const totalDaysEl = document.getElementById('totalDays');
+        const selectedTrainingsDisplay = document.getElementById('selectedTrainingsDisplay');
+        const calculatedPriceEl = document.getElementById('calculatedPrice');
+        const seasonNoticeEl = document.getElementById('seasonNotice');
+        const discountNoticeEl = document.getElementById('discountNotice');
+
+        // Nastavení minimálního data (ochrana proti minulosti)
+        const today = new Date();
+        const yyyy = today.getFullYear();
+        const mm = String(today.getMonth() + 1).padStart(2, '0');
+        const dd = String(today.getDate()).padStart(2, '0');
+        const formattedToday = `${yyyy}-${mm}-${dd}`;
+        startDateInput.min = formattedToday;
+        endDateInput.min = formattedToday;
+
+        // Kontrola jarních prázdnin (Únor a Březen)
+        function isJarniPrazdniny(date) {
+            const month = date.getMonth() + 1; 
+            return month === 2 || month === 3;
+        }
+
+        // Kontrola sezónních termínů
+        function isSeasonalDate(date) {
+            const month = date.getMonth() + 1;
+            const day = date.getDate();
+
+            if (month >= 7 && month <= 8) return true; // Letní prázdniny
+            if ((month === 12 && day >= 24) || (month === 1 && day <= 1)) return true; // Vánoce / Nový rok
+            if (isJarniPrazdniny(date)) return true; // Jarní prázdniny
+
+            return false;
+        }
+
+        // Dynamická správa možností tréninků na základě počtu dní
+        function updateTrainingOptions(maxDays) {
+            const currentSelected = parseInt(trainingCountSelect.value) || 0;
+            trainingCountSelect.innerHTML = '<option value="0">Bez výcviku / tréninku</option>';
+            
+            for (let i = 1; i <= maxDays; i++) {
+                const option = document.createElement('option');
+                option.value = i;
+                option.textContent = `${i}x trénink (+${i * PRICES.training} Kč)`;
+                if (i === currentSelected) {
+                    option.selected = true;
+                }
+                trainingCountSelect.appendChild(option);
+            }
+            
+            if (parseInt(trainingCountSelect.value) > maxDays) {
+                trainingCountSelect.value = maxDays;
+            }
+            selectedTrainingsDisplay.textContent = trainingCountSelect.value;
+        }
+
+        // Samostatná funkce pro hlídání viditelnosti políčka (nezávislá na datech)
+        function checkDogCountDisplay() {
+            const dogs = parseInt(dogCountSelect.value);
+            if (dogs > 1) {
+                shareRoomBox.style.display = 'flex';
+            } else {
+                shareRoomBox.style.display = 'none';
+                shareRoomCheckbox.checked = false; // Odškrtne při 1 psovi
+            }
+        }
+
+        // Reakce na změnu počtu psů
+        dogCountSelect.addEventListener('change', function() {
+            checkDogCountDisplay();
+            calculatePrice();
+        });
+        function calculatePrice() {
+            // Spustí kontrolu zobrazení pokaždé, když se kalkuluje cena
+            checkDogCountDisplay(); 
+
+            const startVal = startDateInput.value;
+            const endVal = endDateInput.value;
+
+            // OPRAVA: Pokud data chybí, bezpečně vynulujeme rozhraní a ukončíme funkci
+            if (!startVal || !endVal) {
+                totalDaysEl.textContent = "0";
+                calculatedPriceEl.textContent = "0";
+                selectedTrainingsDisplay.textContent = "0";
+                updateTrainingOptions(0);
+                return;
+            }
+
+            const startDate = new Date(startVal);
+            const endDate = new Date(endVal);
+
+            if (endDate < startDate) {
+                totalDaysEl.textContent = "0";
+                calculatedPriceEl.textContent = "0";
+                selectedTrainingsDisplay.textContent = "0";
+                seasonNoticeEl.textContent = "Datum konce musí být stejné nebo po začátku pobytu.";
+                updateTrainingOptions(0);
+                return;
+            }
+
+            const timeDiff = Math.abs(endDate.getTime() - startDate.getTime());
+            const totalDays = Math.ceil(timeDiff / (1000 * 60 * 60 * 24)) + 1;
+            totalDaysEl.textContent = totalDays;
+
+            updateTrainingOptions(totalDays);
+
+            let totalPrice = 0;
+            let seasonalDaysCount = 0;
+            const dogs = parseInt(dogCountSelect.value);
+            const isSharing = shareRoomCheckbox.checked;
+            const selectedRoom = roomSizeSelect.value;
+
+            let currentDate = new Date(startDate);
+
+            for (let i = 0; i < totalDays; i++) {
+                let isSeason = isSeasonalDate(currentDate);
+                if (isSeason) seasonalDaysCount++;
+
+                let dayPrice = isSeason ? PRICES[selectedRoom].season : PRICES[selectedRoom].standard;
+                if (dogs > 1) {
+                    for (let d = 2; d <= dogs; d++) {
+                        if (isSharing) {
+                            const baseRate = isSeason ? PRICES[selectedRoom].season : PRICES[selectedRoom].standard;
+                            dayPrice += (baseRate * 0.5);
+                        } else {
+                            dayPrice += isSeason ? PRICES[selectedRoom].season : PRICES[selectedRoom].standard;
+                        }
+                    }
+                }
+
+                totalPrice += dayPrice;
+                currentDate.setDate(currentDate.getDate() + 1);
+            }
+
+            const trainings = parseInt(trainingCountSelect.value) || 0;
+            totalPrice += (trainings * PRICES.training);
+            selectedTrainingsDisplay.textContent = trainings;
+
+            calculatedPriceEl.textContent = totalPrice.toLocaleString('cs-CZ');
+
+            if (dogs > 1 && isSharing) {
+                discountNoticeEl.textContent = `Aplikována 50% sleva za sdílení pokoje pro ${dogs - 1}x psa.`;
+                discountNoticeEl.style.display = 'block';
+            } else {
+                discountNoticeEl.style.display = 'none';
+            }
+
+            if (seasonalDaysCount > 0) {
+                seasonNoticeEl.textContent = `Započtena sezónní cena (${seasonalDaysCount}x den v hlavní/zimní sezóně nebo prázdninách).`;
+                seasonNoticeEl.style.color = '#BC7C64';
+            } else {
+                seasonNoticeEl.textContent = "Zvolené období spadá do standardního ceníku.";
+                seasonNoticeEl.style.color = '#FFF';
+            }
+        }
+
+        form.addEventListener('input', calculatePrice);
+        startDateInput.addEventListener('change', () => {
+            endDateInput.min = startDateInput.value;
+            calculatePrice();
+        });
+        endDateInput.addEventListener('change', calculatePrice);
+        trainingCountSelect.addEventListener('change', calculatePrice);
+
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const formData = new FormData(form);
+            formData.append("Celkovy_Pocet_Dni", totalDaysEl.textContent);
+            formData.append("Pocet_Vybranych_Treninku", trainingCountSelect.value);
+            formData.append("Vypocitana_Cena_Kč", calculatedPriceEl.textContent);
+            formData.append("Sdileji_Spolecny_Pokoj", shareRoomCheckbox.checked ? "Ano" : "Ne");
+            formData.append("Prvni_Navsteva_Hotelu", document.getElementById('firstTime').checked ? "Ano" : "Ne");
+            
+            // Přidání chování a vlastností pejska do e-mailu
+            formData.append("Agrese_pes_nebo_clovek", document.getElementById('dogAggressive').checked ? "Ano" : "Ne");
+            formData.append("Fena_bude_harat", document.getElementById('dogHeat').checked ? "Ano" : "Ne");
+            formData.append("Problem_se_samotou", document.getElementById('dogAnxiety').checked ? "Ano" : "Ne");
+            formData.append("Uziva_leky", document.getElementById('dogMeds').checked ? "Ano" : "Ne");
+
+            // Odeslání na formsubmit endpoint (doporučuji přidat e-mail rovnou do URL za lomítko, např. formsubmit.co/vas-email@gmail.com)
+            fetch("https://formsubmit.co", {
+                method: "POST",
+                body: formData
+            })
+            .then(response => {
+                window.location.href = "dekujeme.html";
+            })
+            .catch(error => {
+                window.location.href = "chyba.html";
+            });
+        });
+
+        // Schová políčko sdílení ihned po načtení webu
+function checkDogCountDisplay() {
+    const dogs = parseInt(dogCountSelect.value);
+    if (dogs > 1) {
+        shareRoomBox.style.setProperty('display', 'flex', 'important');
+    } else {
+        shareRoomBox.style.setProperty('display', 'none', 'important');
+        shareRoomCheckbox.checked = false; 
+    }
+}
+
+
+    </script>
+</body>
+</html>

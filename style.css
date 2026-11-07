@@ -1,0 +1,1014 @@
+/* --- RESET A ZÁKLADNÍ NASTAVENÍ --- */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+    /* Natvrdo nasazený font Poppins pro celý web */
+	font-family: 'Poppins', sans-serif !important;
+	background-color: #ffffff;
+	color: #000;
+	line-height: 1.6;
+}
+
+.container {
+	width: 90%;
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+p {
+	font-size: 1.1rem;
+}
+
+/* --- STRIKTNÍ DESIGN PRAVIDLA ZE ZADÁNÍ --- */
+section {
+	padding: 100px 0;
+}
+
+/* Absolutní zákaz jakýchkoli ohraničení, čar a rámečků */
+*, *:before, *:after {
+	border: none !important;
+	outline: none !important;
+}
+
+/* --- TYPOGRAFIE S FONTEM POPPINS --- */
+h1, h2, h3, .logo, .email-highlight-box a, .subtitle, .section-subtitle {
+	font-family: 'Poppins', sans-serif !important;
+	font-weight: 700 !important;
+ /* Výrazné, tučné nadpisy */
+	letter-spacing: -0.5px;
+ /* Moderní užší vzhled u velkých nadpisů */;
+}
+
+h1 {
+	font-size: 3.5rem;
+	color: #FFF;
+	margin-bottom: 20px;
+	margin-top: +30px;
+}
+
+h2 {
+	font-size: 2.8rem;
+	color: #60110C;
+ /* Tmavě vínová */
+	margin-bottom: 50px;
+	text-align: center;
+}
+
+h3 {
+	font-size: 1.7rem;
+	color: #60110C;
+	margin-bottom: 15px;
+}
+
+.subtitle {
+	font-size: 1.4rem;
+	color: #ffd3c3;
+	margin-bottom: 40px;
+	font-weight: 500 !important;
+}
+
+.subtitle-slideshow {
+	font-size: 1.4rem;
+	color: #fff;
+	margin-bottom: 40px;
+	font-weight: 500 !important;
+}
+
+.section-subtitle {
+	font-size: 1.3rem;
+	color: #BC7C64;
+	margin-bottom: 20px;
+}
+
+/* --- TLAČÍTKA A ODKAZY --- */
+.btn {
+	display: inline-block;
+	background-color: #BC7C64;
+	color: #FFF;
+	padding: 16px 32px;
+	text-decoration: none;
+	font-weight: 600;
+	border-radius: 50px;
+ /* Zaoblený styl z letáků */
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-size: 0.9rem;
+	transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+	background-color: #60110C;
+}
+
+.btn-slideshow {
+	display: inline-block;
+	background-color: #ffffff5b;
+	color: #FFF;
+	padding: 18px 36px;
+	text-decoration: none;
+	font-weight: 600;
+	border-radius: 50px;
+ /* Zaoblený styl z letáků */
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-size: 1.2rem;
+	transition: background-color 0.3s ease;
+}
+
+.btn-slideshow:hover {
+	background-color: #00000071;
+}
+
+/* --- FIXNÍ HLAVIČKA A NAVIGACE --- */
+.main-header {
+	background-color: #FFF;
+	padding: 20px 0;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 1000;
+}
+
+.header-flex {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.logo img {
+	display: block;
+	height: 60px;
+	width: auto;
+}
+
+.main-nav {
+	display: flex;
+	align-items: center;
+}
+
+.main-nav a {
+	color: #000;
+	text-decoration: none;
+	margin-left: 30px;
+	font-weight: 600;
+	font-size: 1.05rem;
+	transition: color 0.3s ease;
+}
+
+.main-nav a:hover, 
+.main-nav a.active {
+	color: #BC7C64;
+}
+
+#menu-toggle {
+	display: none;
+}
+
+.icon img {
+	width: 40%;
+	height: 40%;
+	margin: 40px;
+	object-fit: contain;
+	overflow: hidden;
+}
+
+.btn {
+	padding: 20px 45px;
+	margin: 30px 0;
+	font-size: larger;
+}
+
+.hamburger-icon {
+	display: none;
+	cursor: pointer;
+	flex-direction: column;
+	gap: 6px;
+}
+
+.hamburger-icon span {
+	display: block;
+	width: 30px;
+	height: 3px;
+	background-color: #60110C;
+	transition: 0.3s ease;
+}
+
+/* --- ÚVODNÍ BANNERY (KOMPENZACE FIXNÍHO MENU) --- */
+.hero-section {
+	background-color: #60110C;
+	padding: 250px 0 150px 0;
+	text-align: center;
+}
+
+.hero-content {
+	max-width: 800px;
+	margin: 0 auto;
+}
+
+.page-banner {
+	background-color: #60110C;
+	padding-top: 120px;
+	text-align: center;
+	height: 400px;
+}
+.page-banner2 {
+	background-color: #ffffff;
+	text-align: center;
+    height: 250px;
+    margin-bottom: -100px;
+}
+.page-banner2 h1 {
+    color: #60110C;
+    margin-top: -50px;
+    margin-bottom: -50px;
+}
+.page-banner2 p {
+    color: #000;
+    font-weight: 700;
+    margin-top: 50px;
+    margin-bottom: -100px;
+    font-size: x-large;
+}
+
+.page-banner3 {
+	background-color: #ffffff;
+	text-align: center;
+	height: 200px;
+    color: #60110C;
+    margin-bottom: 100px;
+    margin-top: -150px;
+    font-weight: 400;
+}.page-banner3 p {
+	background-color: #ffffff;
+	text-align: center;
+	height: 200px;
+    color: #60110C;
+    font-size: x-large;
+    font-weight: 350;
+}
+/* --- GRIDS A STRUKTURY --- */
+.grid-4 {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+	gap: 40px;
+}
+
+.grid-3 {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	gap: 40px;
+}
+
+.grid-2 {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	gap: 60px;
+	align-items: center;
+}
+
+/* --- DETAILNÍ STRÁNKY SLUŽEB / KARTY --- */
+.service-detail-section {
+	background-color: #FFF;
+}
+
+.service-text {
+	position: relative;
+}
+
+.service-number {
+	display: block;
+	font-size: 4rem;
+	font-weight: 700;
+	color: #BC7C64;
+	opacity: 0.2;
+	line-height: 1;
+	margin-bottom: 10px;
+}
+
+.service-text h2 {
+	text-align: left;
+	margin-bottom: 25px;
+}
+
+.dlouhy {
+	padding: 10% 15%;
+	font-size: large;
+}
+
+.service-text p {
+	color: #000;
+	margin-bottom: 20px;
+	font-size: 1.1rem;
+	font-weight: 400;
+}
+
+.btn-large {
+	margin: 20px 30px;
+	padding: auto;
+	height: auto;
+	width: 30rem;
+	align-items: center;
+	border-radius: 15px;
+	font-size: 1.5rem;
+	text-wrap-mode: wrap;
+	text-wrap-style: balance;
+}
+
+.btn-large3 {
+	margin: 20px 30px;
+	padding: auto;
+	height: auto;
+	width: 30rem;
+	align-items: center;
+	border-radius: 15px;
+	font-size: 1.5rem;
+	text-wrap-mode: wrap;
+	text-wrap-style: balance;
+    color: #60110C;
+    background-color: #ffefe0;
+}
+.btn-large3:hover {
+	margin: 20px 30px;
+	height: auto;
+	width: 30rem;
+	align-items: center;
+	border-radius: 15px;
+	font-size: 1.5rem;
+	text-wrap-mode: wrap;
+	text-wrap-style: balance;
+    color: #000;
+    background-color: #BC7C64;
+}
+
+@media (max-width: 769px) {
+	body {
+		margin: 0;
+	}
+
+	.btn {
+		background-color: #BC7C64;
+		color: #fff;
+		text-decoration: none;
+		padding: 1rem 2rem;
+		width: auto;
+		height: auto;
+		text-wrap-mode: wrap;
+		text-wrap-style: balance;
+		font-weight: 600;
+		border-radius: 15px;
+ /* Zaoblený styl z letáků */
+		text-transform: uppercase;
+		font-size: 1.2rem;
+		letter-spacing: 1px;
+		transition: background-color 0.3s ease;
+	}
+}
+
+.card {
+	background-color: #fff;
+	padding: 30px;
+	text-align: center;
+}
+
+.card-link {
+	display: inline-block;
+	margin-top: 15px;
+	color: #BC7C64;
+	text-decoration: none;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+.card-link:hover {
+	color: #60110C;
+}
+
+/* --- GRAFICKÉ BLOKY A STRÁNKA UBYTOVÁNÍ --- */
+.room-category-section {
+	padding: 100px 0;
+}
+
+.room-category-section.bg-dark {
+	background-color: #60110C;
+}
+
+.category-intro {
+	text-align: center;
+	max-width: 700px;
+	margin: -30px auto 60px auto;
+	font-size: 1.2rem;
+}
+
+.room-block {
+	margin-bottom: 80px;
+}
+
+.room-desc {
+	font-size: 1.1rem;
+	margin-bottom: 25px;
+}
+
+.image-gallery-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+	gap: 20px;
+	overflow: hidden;
+	height: 400px;
+}
+
+.image-gallery-grid img {
+	flex-shrink: 0;
+	width: 380px;
+	min-width: 100%;
+	min-height: 100%;
+	object-fit: cover;
+}
+
+.placeholder-graphic, .placeholder-graphic-alt, .placeholder-graphic-charity,
+.gallery-img-placeholder, .gallery-img-placeholder-light {
+	height: 400px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 1.5rem;
+	border-radius: 12px;
+}
+
+.ref-graphic {
+	color: #60110C;
+}
+
+h6 {
+	color: #BC7C64;
+	font-size: 1.7rem;
+	margin: 3%;
+}
+
+@view-transition {
+	navigation: auto;
+}
+
+.arrow:hover {
+	width: 153px;
+	transition: 0.2s;
+	opacity: 100%;
+}
+
+.placeholder-graphic, .gallery-img-placeholder {
+	background-color: #BC7C64;
+	color: #FFF;
+}
+
+.placeholder-graphic-alt, .placeholder-graphic-charity {
+	background-color: #60110C;
+	color: #FFF;
+}
+
+.gallery-img-placeholder-light {
+	background-color: #FFF;
+	color: #60110C;
+	height: 250px;
+}
+
+.gallery-img-placeholder {
+	height: 250px;
+}
+
+.text-white {
+	color: #FFF !important;
+}
+
+.text-terracotta {
+	color: #BC7C64 !important;
+}
+
+/* --- STRÁNKA KONTAKT A REZERVACE --- */
+.contact-info-section {
+	background-color: #FFF;
+	margin-top: -90px;
+}
+
+.contact-info-sections {
+	background-color: #FFF;
+	margin: 0;
+}
+
+.contact-card {
+	text-align: center;
+	padding: 40px 20px;
+}
+
+.contact-card1 {
+	text-align: center;
+	padding: 40px 20px;
+}
+
+.contact-card1 p {
+	font-size: 1.7rem;
+	font-weight: 600;
+}
+
+.contact-card1 a {
+	font-size: 1.7rem;
+	text-decoration: none;
+	font-weight: 600;
+}
+
+.ref-card {
+	text-align: center;
+	padding: 40px 40px;
+	border-radius: 3vh;
+	background-color: #ffffff;
+	box-shadow: 1vh 1vh 2vh  #0000005e;
+}
+
+.ref-card-index {
+	text-align: center;
+	padding: 40px 40px;
+	align-self: auto;
+	background-color: #ffffff;
+	box-shadow: 1vh 1vh 2vh  #0000005e;
+	height: 400px;
+	justify-content: center;
+	align-items: center;
+	border-radius: 12px;
+}
+
+.ref-card img {
+	border-radius: 2vh;
+	width: 70%;
+}
+
+.paw-icon {
+	font-size: 2.5rem;
+	color: #ffffff;
+	margin-bottom: 15px;
+}
+
+.contact-link-text {
+	color: #000;
+	text-decoration: none;
+	font-weight: 600;
+	font-size: 1.2rem;
+	transition: color 0.3s ease;
+}
+
+.contact-link-text:hover {
+	color: #BC7C64;
+}
+
+.reservation-guide-section {
+	background-color: #FFF;
+	padding-top: 0;
+}
+
+.reservation-box {
+	max-width: 800px;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.guide-lead {
+	font-size: 1.25rem;
+	margin-bottom: 25px;
+}
+
+/* Vínový e-mailový blok přesně z letáku */
+.email-highlight-box {
+	background-color: #60110C;
+	padding: 22px 45px;
+	display: inline-block;
+	border-radius: 12px;
+	margin-bottom: 50px;
+}
+
+.email-highlight-box a {
+	color: #FFF;
+	font-size: 1.9rem;
+	text-decoration: none;
+	letter-spacing: 0.5px;
+}
+
+.guide-content {
+	text-align: left;
+	max-width: 700px;
+	margin: 0 auto;
+}
+
+.guide-content h3 {
+	margin-bottom: 30px;
+	text-align: center;
+}
+
+.reservation-list {
+	list-style: none;
+}
+
+.reservation-list li {
+	position: relative;
+	padding-left: 35px;
+	margin-bottom: 20px;
+	font-size: 1.1rem;
+}
+
+.reservation-list li::before {
+	content: "🐾";
+	position: absolute;
+	left: 0;
+	top: 2px;
+	color: #ffffff;
+	font-size: 1.1rem;
+}
+
+.copyright {
+	margin-top: 40px;
+}
+
+.podm {
+	color: #ffd3c3;
+	text-decoration: none;
+}
+/* --- PATIČKA --- */
+.main-footer {
+	background-color: #60110C;
+	color: #FFF;
+	padding: 4px 0 30px 0;
+}
+
+.main-footer .btn {
+	margin-top: 15px;
+	margin-bottom: 38px;
+	padding: 10px 45px;
+	font-size: medium;
+	background-color: #bc7b6461;
+}
+
+.copyright {
+	text-align: center;
+	font-size: 0.9rem;
+	opacity: 0.8;
+}
+¨
+.fifi h5 {
+    font-size: larger;
+}
+
+h5 {
+    font-size: xx-large;
+    font-weight: 300;
+}
+
+
+
+/* --- ANIMOVANÉ MOBILNÍ HAMBURGER MENU --- */
+@media (max-width: 1268px) {
+	section, .room-category-section {
+		padding: 60px 0;
+	}
+
+	.hero-section {
+		padding: 160px 0 60px 0;
+	}
+
+	.page-banner {
+		padding: 140px 0 40px 0;
+	}
+
+	h1 {
+		font-size: 2.5rem;
+	}
+
+	h2 {
+		font-size: 2.2rem;
+		margin-bottom: 30px;
+	}
+
+	.service-text h2, .service-number, .service-text, .category-intro {
+		text-align: center;
+	}
+
+	.email-highlight-box {
+		padding: 15px 20px;
+		width: 100%;
+	}
+
+	.email-highlight-box a {
+		font-size: 1.3rem;
+	}
+
+	.hamburger-icon {
+		display: flex;
+	}
+
+	.main-nav {
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+		background-color: #FFF;
+		position: absolute;
+		top: 100%;
+		left: 0;
+		padding: 0;
+		max-height: 0;
+		opacity: 0;
+		overflow: hidden;
+		visibility: hidden;
+		transition: max-height 0.5s ease-in-out, opacity 0.4s ease-in-out, visibility 0.5s;
+	}
+
+	.main-nav a {
+		margin: 15px 0;
+		font-size: 1.2rem;
+		width: 100%;
+		text-align: center;
+		margin-left: 0;
+	}
+
+	#menu-toggle:checked ~ .main-nav {
+		max-height: 500px;
+		opacity: 1;
+		visibility: visible;
+		padding: 20px 0;
+	}
+
+	#menu-toggle:checked ~ .hamburger-icon span:nth-child(1) {
+		transform: rotate(45deg) translate(6px, 6px);
+	}
+
+	#menu-toggle:checked ~ .hamburger-icon span:nth-child(2) {
+		opacity: 0;
+	}
+
+	#menu-toggle:checked ~ .hamburger-icon span:nth-child(3) {
+		transform: rotate(-45deg) translate(6px, -7px);
+	}
+}
+
+/* --- STYLY PRO REZERVAČNÍ FORMULÁŘ S KALKULAČKOU --- */
+.form-section {
+	background-color: #FFF;
+}
+
+.booking-form {
+	max-width: 900px;
+	margin: 0 auto;
+}
+
+/* Uspořádání prvků do čisté mřížky (2 sloupce na desktopu) */
+.form-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+	gap: 30px;
+	margin-bottom: 50px;
+}
+
+.form-group {
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+}
+
+.form-group label {
+	font-size: 1rem;
+	font-weight: 600;
+	color: #60110C;
+ /* Elegantní vínová pro popisky */;
+}
+
+/* Čistý design políček - ABSOLUTNĚ BEZ OHRANIČENÍ (border: none) */
+.form-group input, 
+.form-group select {
+	font-family: 'Poppins', sans-serif !important;
+	background-color: #FFF;
+	box-shadow: 0 4px 20px rgba(96, 17, 12, 0.08);
+ /* Velmi jemný vínový stín místo čáry pro definici tvaru */
+	padding: 16px 20px;
+	font-size: 1rem;
+	color: #000;
+	border-radius: 8px;
+	transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+	-webkit-appearance: none;
+ /* Odstranění šipek a defaultního vzhledu na iOS/Safari */
+	-moz-appearance: none;
+	appearance: none;
+}
+
+
+
+/* Zajištění bílé ikony kalendáře při aktivaci políčka */
+.form-group input:focus::-webkit-calendar-picker-indicator {
+	filter: invert(1);
+}
+
+/* BOX S DYNAMICKÝM VÝPOČTEM CENY */
+.price-calculation-box {
+	background-color: #60110C;
+ /* Celobarevný vínový blok bez jakýchkoli čar */
+	color: #FFF;
+	padding: 40px;
+	border-radius: 12px;
+	text-align: center;
+	margin-bottom: 50px;
+}
+
+.price-calculation-box h3 {
+	color: #FFF !important;
+	margin-bottom: 20px;
+	font-size: 1.6rem;
+}
+
+.price-details {
+	font-size: 1.1rem;
+	margin-bottom: 20px;
+}
+
+.season-text {
+	font-size: 0.95rem;
+	margin-top: 5px;
+	font-weight: 500;
+}
+
+.final-price {
+	font-size: 2.2rem;
+	font-weight: 700;
+}
+
+.final-price span {
+	color: #BC7C64;
+ /* Výsledná cena zvýrazněná terakotovou barvou */;
+}
+
+/* Vycentrování odesílacího tlačítka */
+.center-text {
+	text-align: center;
+}
+
+.booking-form .btn {
+	cursor: pointer;
+	padding: 30px;
+	font-size: 1.5rem;
+	font-family: 'Poppins', sans-serif !important;
+}
+
+/* RESPONZIVITA PRO MOBILNÍ TELEFONY */
+@media (max-width: 768px) {
+	body {
+		margin: 0vw;
+	}
+
+	div {
+		padding: +1vw;
+	}
+
+	.form-grid {
+		grid-template-columns: 1fr;
+ /* Na mobilu se políčka seřadí do jednoho sloupce pod sebe */
+		gap: 20px;
+	}
+
+	.price-calculation-box {
+		padding: 30px 20px;
+	}
+
+	.final-price {
+		font-size: 1.8rem;
+	}
+}
+
+/* Klasická políčka i standardní selecty bez ohraničení - vše pod sebou */
+.form-field input, 
+.form-field select {
+	font-family: 'Poppins', sans-serif !important;
+	background-color: #FFF !important;
+ /* Výchozí bílé pozadí */
+	box-shadow: 0 4px 20px rgba(96, 17, 12, 0.08) !important;
+ /* Jemný stín místo čáry */
+	padding: 16px 20px !important;
+	font-size: 1rem !important;
+	color: #000 !important;
+	border-radius: 8px !important;
+	border: none !important;
+	width: 100% !important;
+	display: block;
+	transition: box-shadow 0.3s ease !important;
+}
+
+/* OPRAVA: Při aktivaci a psaní zůstane pozadí bílé a text černý */
+.form-field input:focus, 
+.form-field select:focus {
+	background-color: #FFF !important;
+ /* Držíme čistě bílou barvu */
+	color: #000 !important;
+ /* Text zůstává černý a skvěle čitelný */
+	box-shadow: 0 4px 25px rgba(96, 17, 12, 0.18) !important;
+ /* Pouze mírně zvýrazníme stín pro moderní efekt */;
+}
+
+/* Ikona kalendáře zůstane tmavá, aby byla na bílém pozadí vidět */
+.form-field input:focus::-webkit-calendar-picker-indicator {
+	filter: none !important;
+}
+
+
+
+/* --- Banner Slideshow Background Container --- */
+.banner-slideshow {
+	padding: 250px 0 150px 0;
+	text-align: center;
+	position: relative;
+	width: 100%;
+	overflow: hidden;
+	background-color: #111;
+ /* Fallback color */;
+}
+
+/* The permanent black opaque overlay sitting over the images */
+.banner-slideshow::after {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.5);
+ /* 50% darkness - change to 0.7 for darker, 0.3 for lighter */
+	z-index: 2;
+	pointer-events: none;
+}
+
+/* Individual background slide layers */
+.banner-slideshow .bg-slide {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	z-index: 1;
+	animation: bannerFade 16s infinite ease-in-out;
+ /* 16s total animation loop */;
+}
+
+/* Staggering the animation timing for 4 background images */
+.banner-slideshow .bg-slide:nth-child(1) {
+	animation-delay: 0s;
+}
+
+.banner-slideshow .bg-slide:nth-child(2) {
+	animation-delay: 4s;
+}
+
+.banner-slideshow .bg-slide:nth-child(3) {
+	animation-delay: 8s;
+}
+
+.banner-slideshow .bg-slide:nth-child(4) {
+	animation-delay: 12s;
+}
+
+/* Crossfade loop calculations for 4 images */
+@keyframes bannerFade {
+	0% {opacity: 0;}
+
+	6.25% {opacity: 1;}
+
+	25% {opacity: 1;}
+
+	31.25% {opacity: 0;}
+
+	100% {opacity: 0;}
+}
+
+/* The actual text/content of your banner */
+.banner-content {
+	position: relative;
+	z-index: 3;
+ /* Places content cleanly above the background and dark overlay */
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	color: #ffffff;
+	text-align: center;
+	padding: 20px;
+}
+
+.about-graphic {
+	height: 400px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 1.5rem;
+	border-radius: 12px;
+	background-image: url("venek/hotel.jpeg");
+	background-size: cover;
+}

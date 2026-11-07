@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Psí hotel Deniska</title>
+    <link rel="icon" type="image/x-icon" href="favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    
+    <!-- Tvůj styl -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- HLAVIČKA S LOGEM A HAMBURGEREM -->
+    <header class="main-header">
+        <div class="container header-flex">
+            <!-- Logo místo původního textového nadpisu -->
+            <div class="logo">
+                <a href="index.html"><img src="logo.png" alt="Psí hotel Deniska"></a>
+            </div>
+            
+            <!-- Čisté CSS mobilní menu -->
+            <input type="checkbox" id="menu-toggle">
+            <label for="menu-toggle" class="hamburger-icon">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+
+            <nav class="main-nav">
+                <a href="index.html">Úvod</a>
+                <a href="sluzby.html">Služby</a>
+                <a href="ubytovani.html">Ubytování</a>
+                <a href="reference.html">Reference</a>
+                <a href="pomahame.html">Články</a>
+                <a href="cenik.html">Ceník</a>
+                <a href="kontakt.html">Kontakt</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- BANNER STRÁNKY -->
+    <section class="page-banner">
+        <div class="container">
+            <h1>Moje služby</h1>
+            <p class="subtitle">Kompletní péče, bezpečí a profesionální trénink pro vašeho psa v Milonicích.</p>
+        </div>
+    </section>
+
+    <!-- DETAIL SLUŽBY 1: UBYTOVÁNÍ PSŮ -->
+    <section id="ubytovani" class="service-detail-section bg-white">
+        <div class="container grid-2">
+            <div class="service-text">
+                <span class="service-number">01</span>
+                <h2>Ubytování psů</h2>
+                <p>Nabízím komfortní a bezpečné ubytování pro vaše pejsky v rodinném prostředí během vaší dovolené, služební cesty nebo víkendu mimo domov. Každý pejsek u nás získává plnohodnotné zázemí a individuální přístup podle svých zvyků.</p>
+                <p>Součástí pobytu je neustálý dohled, pravidelné krmení, dostatek pohybu na prostorném výběhu a samozřejmě spousta mazlení a pozornosti, aby pejskovi nebylo smutno.</p>
+                <a href="kontakt.html" class="btn">Rezervovat ubytování</a>
+            </div>
+            <div class="service-graphic">
+                <img src="" class="gallery-img-placeholder">
+            </div>
+        </div>
+    </section>
+
+    <!-- DETAIL SLUŽBY 2: POBYT S TRÉNINKEM -->
+    <section id="pobyt-trenink" class="service-detail-section bg-white">
+        <div class="container grid-2">
+            
+            <div class="service-text">
+                <span class="service-number">02</span>
+                <h2>Pobyt s tréninkem</h2>
+                <p>Intenzivní program, kdy pes bydlí přímo u nás a během celého pobytu s ním aktivně pracujeme. Tato služba je ideální pro řešení konkrétních problémů, jako je tahání na vodítku, reaktivita na jiné psy nebo základní poslušnost.</p>
+                <p>Pejsek se učí v reálných situacích pod vedením zkušeného trenéra a domů se vrací s nastavenými pravidly, které vám následně podrobně vysvětlíme.</p>
+                <a href="kontakt.html" class="btn">Chci objednat pobyt</a>
+            </div>
+            <div class="service-graphic">
+                <div class="placeholder-graphic-alt">Ilustrace / Foto tréninku</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- DETAIL SLUŽBY 3: TRÉNINKOVÉ PROCHÁZKY -->
+    <section id="prochazky" class="service-detail-section bg-white">
+        <div class="container grid-2">
+            <div class="service-text">
+                <span class="service-number">03</span>
+                <h2>Tréninkové procházky</h2>
+                <p>Praktické lekce zaměřené na zvládání psa v běžném venkovním prostředí. Procházky probíhají v reálných situacích (v parku, v lese i v blízkosti města), kde se pes učí vnímat svého majitele i za přítomnosti různých vzruchů.</p>
+                <p>Zaměřujeme se na klidnou chůzi na prověšeném vodítku, stoprocentní přivolání a správnou socializaci s okolím.</p>
+                <a href="kontakt.html" class="btn">Rezervovat procházku</a>
+            </div>
+            <div class="service-graphic">
+                <div class="placeholder-graphic">Ilustrace / Foto procházky</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- DETAIL SLUŽBY 4: INDIVIDUÁLNÍ TRÉNINK -->
+    <section id="individualni" class="service-detail-section bg-white">
+        <div class="container grid-2">
+           
+            <div class="service-text">
+                <span class="service-number">04</span>
+                <h2>Individuální trénink</h2>
+                <p>Lekce určené výhradně pro vás a vašeho pejska. Celý čas se věnujeme pouze vašim potřebám a cílům. Každý tréninkový plán sestavujeme na míru podle povahy psa a vašich časových možností.</p>
+                <p>Pomůžeme vám lépe porozumět psí řeči, vybudovat si u psa přirozenou autoritu a vyřešit jakékoli nežádoucí chování efektivní a pozitivní cestou.</p>
+                <a href="kontakt.html" class="btn">Domluvit lekci</a>
+            </div>
+             <div class="service-graphic">
+                <div class="placeholder-graphic-alt">Ilustrace / Foto lekce</div>
+            </div>
+        </div>
+    </section>
+
+     <!-- PATIČKA -->
+    <footer class="main-footer">
+        <div class="container">
+            <h2>Rezervace a kontakt</h2>
+            <div class="grid-2">
+                <div class="footer-contacts">
+                    <p><strong>Telefon:</strong> +420 123 456 789</p>
+                    <p><strong>E-mail:</strong> hotel.deniska@gmail.com</p>
+                    <p><strong>Adresa:</strong> Milonice, Roštoutky 150 okres Vyškov </p>
+                    <p><strong>IČO:</strong> 07239351</p><br>
+                    <a href="obchodni.html" class="podm">Obchodní podmínky</a><br>
+                    <a href="zasady.html"class="podm">Zásady ochrany osobních údajů</a>
+                </div>
+                <div class="footer-info">
+                    <p>Máte vybraný konkrétní pokoj?</p>
+                    <a href="kontakt.html" class="btn">rezervace</a><br>
+                    
+                    <a href="podminky.html"class="podm">Podmínky pobytu</a><br>
+                    <a href="balime.html"class="podm">Balíme pejskovi na dovolenou</a>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2026 Psí hotel Deniska. Všechna práva vyhrazena.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

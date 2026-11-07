@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Psí hotel Deniska</title>
+    <link rel="icon" type="image/x-icon" href="favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    
+    <!-- Tvůj styl -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- HLAVIČKA S LOGEM A HAMBURGEREM -->
+    <header class="main-header">
+        <div class="container header-flex">
+            <!-- Logo místo původního textového nadpisu -->
+            <div class="logo">
+                <a href="index.html"><img src="logo.png" alt="Psí hotel Deniska"></a>
+            </div>
+            
+            <!-- Čisté CSS mobilní menu -->
+            <input type="checkbox" id="menu-toggle">
+            <label for="menu-toggle" class="hamburger-icon">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+
+            <nav class="main-nav">
+                <a href="index.html">Úvod</a>
+                <a href="sluzby.html">Služby</a>
+                <a href="ubytovani.html">Ubytování</a>
+                <a href="reference.html">Reference</a>
+                <a href="pomahame.html">Články</a>
+                <a href="cenik.html">Ceník</a>
+                <a href="kontakt.html">Kontakt</a>
+            </nav>
+        </div>
+    </header>
+
+<section class="banner-slideshow hero-section">
+    
+    <!-- Background Slides (Layer 1) -->
+    <div class="bg-slide" style="background-image: url('foto/stare2.jpg');"></div>
+    <div class="bg-slide" style="background-image: url('foto/stare22.jpg');"></div>
+    <div class="bg-slide" style="background-image: url('foto/stare3.jpg');"></div>
+    <div class="bg-slide" style="background-image: url('foto/stare4.jpg');"></div>
+    <div class="bg-slide" style="background-image: url('foto/stare1.jpg');"></div>
+    <div class="bg-slide" style="background-image: url('foto/stare2.jpg');"></div>
+    <div class="bg-slide" style="background-image: url('foto/stare\ \(13\).jpg');"></div>
+    <div class="bg-slide" style="background-image: url('foto/stare\ \(14\).jpg');"></div>
+    <div class="bg-slide" style="background-image: url('foto/stare\ \(15\).jpg');"></div>
+    <div class="bg-slide" style="background-image: url('foto/stare\ \(16\).jpg');"></div>
+    <div class="bg-slide" style="background-image: url('foto/stare\ \(17\).jpg');"></div>
+    <div class="bg-slide" style="background-image: url('foto/stare\ \(19\).jpg');"></div>
+    <div class="bg-slide" style="background-image: url('foto/stare\ \(18\).jpg');"></div>
+    <div class="bg-slide" style="background-image: url('foto/stare2.jpg');"></div>
+
+    <!-- Foreground Content (Layer 3 - Sits on top of the Layer 2 Dark Overlay) -->
+    <div class="banner-content hero-content">
+           <h1>PSÍ HOTEL DENISKA</h1>
+            <p class="subtitle-slideshow">Profesionální péče, ubytování a individuální trénink pro vašeho čtyřnohého kamaráda v Milonicích.</p>
+            <a href="kontakt.html" class="btn-slideshow">Rezervovat termín</a>
+    </div>
+
+</section>
+    
+
+
+    <!-- 3. SEKCE: MOJE SLUŽBY  -->
+    <section class="services-section">
+        <div class="container">
+            <h2>Moje služby</h2>
+            <div class="grid-4">
+                <div class="card">
+                    <div class="icon"> <img src="bed.png"> </div>
+                    <h3>Ubytování<BR>psů</h3>
+                    <p>Komfortní a bezpečné zázemí pro pejsky během vaší dovolené nebo pracovní cesty.</p>
+                    <a href="ubytovani.html" class="card-link">Více o ubytování →</a>
+                </div>
+                <div class="card">
+                    <div class="icon"><img src="education.png"></div>
+                    <h3>Pobyt s tréninkem</h3>
+                    <p>Intenzivní péče spojená s nápravou chování a učením nových dovedností přímo u nás.</p>
+                    <a href="sluzby.html#pobyt-trenink" class="card-link">Více o pobytu →</a>
+                </div>
+                <div class="card">
+                    <div class="icon"><img src="tree.png"></div>
+                    <h3>Tréninkové procházky</h3>
+                    <p>Praktické lekce v terénu zaměřené na socializaci, klidnou chůzi na vodítku a přivolání.</p>
+                    <a href="sluzby.html#prochazky" class="card-link">Více o procházkách →</a>
+                </div>
+                <div class="card">
+                    <div class="icon"><img src="star.png"></div>
+                    <h3>Individuální trénink</h3>
+                    <p>Lekce šité na míru pro vás a vašeho psa. Řešení konkrétních problémů a budování vztahu.</p>
+                    <a href="sluzby.html#individualni" class="card-link">Více o tréninku →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. SEKCE: O NÁS -->
+    <section class="about-section">
+        <div class="container grid-2">
+            <div class="about-text">
+                <h2>O hotelu</h2>
+                <p class="section-subtitle">Znovu otevřeno od srpna</p>
+                <p>Nacházíme se v klidném prostředí obce Milonice. Naším cílem je vytvořit pro vaše pejsky druhý domov, kde se budou cítit bezpečně, milovaně a zapojení do běžného dne.</p>
+                <p>Spojujeme lásku ke psům s profesionálními znalostmi v oblasti psího chování a tréninku. Každému hostovi věnujeme maximální individuální pozornost.</p>
+            </div>
+            <div class="about-graphic">
+                <div hidden>Foto hotelu a zázemí</div>
+            </div>
+        </div>
+    </section>
+
+<!-- 4. SEKCE: reference -->
+    <section class="about-section">
+        <div class="container grid-2">
+            <div class="about-text">
+                <h2>Reference</h2>
+                <p class="section-subtitle">Co o nás píšou ba ba</p>
+                <p>prectete srikajis simply dummy taset's Body Type sheet Body Type sheets. It has survived not ois simply dummy taset's Body Type sheet Body Type sheets. It has survived not oorem Ipsum is simply dummy taset's Body Type sheet Body Type sheets. It has survived not only many , but also the leap into electronic typesetting, remaining essentially unchanged. It was poi</p>
+            </div>
+            <div >
+                <div class="ref-card-index" class="placeholder-graphic">
+                <h6>HONZÍK A CELINE</h6 class="ref-graphic">
+                <p class="ref-graphic"><p class="ref-graphic">positive value increases the size of the shadow, and a negative value decreases the size of the shadopositive value increases the size of the shadow, and a negative value nas rikajorem Ipsum is simply dummy to</p>
+                
+                <a href="reference.html"><img src="arrow.png" class="arrow"
+                    width="150px"></a>
+     
+            </div></div>
+            </div>
+        
+    </section>
+
+    <!-- 5. SEKCE: DOBROČINNOST (Nová sekce před koncem webu) -->
+    <section class="charity-section">
+        <div class="container grid-2">
+            
+            <div class="charity-text">
+                <h2>Články</h2>
+                <p class="section-subtitle">Dáváme šanci těm, kteří v životě neměli štěstí.</p>
+                <p>Kromě komerčního hotelu se věnujeme také pomoci psům v nouzi. Poskytujeme dočasnou péči (dočasky) pro pejsky bez domova, socializujeme je, učíme základním návykům a hledáme jim ty nejlepší nové rodiny.</p>
+                <p>Chcete se podívat na pejsky aktuálně k adopci, nebo naši dobročinnou činnost podpořit finančně či materiálně?</p>
+            </div>
+            <div >
+                <div class="ref-card-index" class="placeholder-graphic">
+                <h6>Pomáháme atdta</h6 class="ref-graphic">
+                <p class="ref-graphic">positive value increases the size of the shadow, and a negative value decreases the size of the shadopositive value increases the size of the shadow, and a negative value nas rikajorem Ipsum is simply dummy to</p>
+                
+                <a href="pomahame.html"><img src="arrow.png" class="arrow"
+                    width="150px"></a>
+            </div></div>
+            </div>
+        </div>
+    </section>
+
+   <!-- PATIČKA -->
+    <footer class="main-footer">
+        <div class="container">
+            <h2>Rezervace a kontakt</h2>
+            <div class="grid-2">
+                <div class="footer-contacts">
+                    <p><strong>Telefon:</strong> +420 123 456 789</p>
+                    <p><strong>E-mail:</strong> hotel.deniska@gmail.com</p>
+                    <p><strong>Adresa:</strong> Milonice, Roštoutky 150 okres Vyškov </p>
+                    <p><strong>IČO:</strong> 07239351</p><br>
+                    <a href="obchodni.html" class="podm">Obchodní podmínky</a><br>
+                    <a href="zasady.html"class="podm">Zásady ochrany osobních údajů</a>
+                </div>
+                <div class="footer-info">
+                    <p>Máte vybraný konkrétní pokoj?</p>
+                    <a href="kontakt.html" class="btn">rezervace</a><br>
+                    
+                    <a href="podminky.html"class="podm">Podmínky pobytu</a><br>
+                    <a href="balime.html"class="podm">Balíme pejskovi na dovolenou</a>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2026 Psí hotel Deniska. Všechna práva vyhrazena.</p>
+            </div>
+        </div>
+    </footer>
+
+
+</body>
+</html>
