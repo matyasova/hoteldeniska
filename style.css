@@ -134,15 +134,6 @@ h3 {
 	z-index: 1000;
 }
 
-.main-header {
-	background-color: #FFF;
-	padding: 20px 0;
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100%;
-	z-index: 1000;
-}
 
 .header-flex {
 	display: flex;
@@ -683,6 +674,7 @@ h5 {
 
 	.main-header{
 		height: 100px;
+		padding: 20px
 	}
 
 	.hero-section {
