@@ -676,7 +676,8 @@ h5 {
 		height: 100px;
 		padding: 20px
 	}
-
+img { heigth: 30px; width: auto}
+	
 	.hero-section {
 		padding: 160px 0 60px 0;
 	}
